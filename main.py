@@ -1,13 +1,20 @@
 import sys
 import file_editor
 
+def get_args():
+	pass
+
+def loop_prompt():
+	pass		
+
 def main():
 	pass
-	#fe = file_editor.file_editor()
-	#if len(sys.argv) > 1:
-		#fe.nuke(sys.argv[1], False)
-	#else:
-		#loop_prompt()
+	# fe = init file editor
+	# if extra arg passed:
+	# 	nuke w/ default params
+	# else:
+	#	loop_prompt(fe)
+	# print goodbye!
 		
 if __name__ == "__main__":
 	main()

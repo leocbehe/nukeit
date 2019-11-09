@@ -1,4 +1,6 @@
+import params
+
 class file_editor():
 	
 	def init(self):
-		pass
+		self.params = params.Params()

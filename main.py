@@ -4,17 +4,18 @@ import file_editor
 def get_args():
 	pass
 
-def loop_prompt():
+def loop_prompt(file_editor):
 	pass		
 
 def main():
 	pass
-	# fe = init file editor
-	# if extra arg passed:
-	# 	nuke w/ default params
-	# else:
-	#	loop_prompt(fe)
-	# print goodbye!
+	fe = file_editor.FileEditor()
+	if len(sys.argv) > 1:
+		filename = sys.argv[1]
+		fe.nuke(filename)
+	else:
+		loop_prompt(fe)
+	print("Goodbye!")
 		
 if __name__ == "__main__":
 	main()

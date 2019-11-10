@@ -1,6 +1,9 @@
 import params
 
-class file_editor():
+class FileEditor():
 	
-	def init(self):
+	def __init__(self):
 		self.params = params.Params()
+	
+	def nuke(filename):
+		pass

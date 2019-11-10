@@ -1,18 +1,10 @@
 class Params():
 	
 	def __init__(self):
-		self.__continue_looping = True
 		self.__word = ""
 		self.__replace = False
 		self.__replace_word = ""
-		
-	@property
-	def continue_looping(self):
-		return self.__continue_looping
-		
-	@continue_looping.setter
-	def continue_looping(self, continue_looping):
-		self.__continue_looping = continue_looping
+		self.__filename = ""
 		
 	@property
 	def word(self):
@@ -37,3 +29,11 @@ class Params():
 	@replace_word.setter
 	def replace_word(self, replace_word):
 		self.__replace_word = replace_word
+		
+	@property
+	def filename(self):
+		return self.__filename
+		
+	@filename.setter
+	def filename(self, filename):
+		self.__filename = filename

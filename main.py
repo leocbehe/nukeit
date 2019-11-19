@@ -1,16 +1,35 @@
 import sys
-import file_editor
+import file_editor	
 
 def get_params(fe):
-	# prompt for each value
-	# if any value returned is empty, return false
-	return False
+	fe.params.filename = input("Please enter a filename, or press enter to quit.")
+	if not fe.params.filename:
+		return False
+		
+	fe.params.word = input("Please enter a word to nuke, or press enter to quit.")
+	if not fe.params.word:
+		return False
+	
+	tmp = input("Would you like to replace this word with another word? ( y/n ) or press enter to quit.")
+	if not tmp:
+		return False
+	else:
+		fe.params.replace = "y" in tmp.lower()
+		
+	if fe.params.replace:
+		fe.params.replace_word = input("Please enter the replacement word, or press enter to quit.")
+		if not fe.params.replace_word:
+			return False
+		
+	return True
 
 def loop_prompt(fe):
 	continue_looping = True
 	while continue_looping:
-		continue_looping = get_params(fe)
-		fe.nuke()
+		if get_params(fe):
+			fe.nuke()
+		else:
+			continue_looping = False
 
 def main():
 	pass

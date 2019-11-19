@@ -1,10 +1,18 @@
 class Params():
 	
 	def __init__(self):
+		self.__filename = ""
 		self.__word = ""
 		self.__replace = False
 		self.__replace_word = ""
-		self.__filename = ""
+		
+	@property
+	def filename(self):
+		return self.__filename
+		
+	@filename.setter
+	def filename(self, filename):
+		self.__filename = filename
 		
 	@property
 	def word(self):
@@ -30,10 +38,3 @@ class Params():
 	def replace_word(self, replace_word):
 		self.__replace_word = replace_word
 		
-	@property
-	def filename(self):
-		return self.__filename
-		
-	@filename.setter
-	def filename(self, filename):
-		self.__filename = filename

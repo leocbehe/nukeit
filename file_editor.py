@@ -6,4 +6,4 @@ class FileEditor():
 		self.params = params.Params()
 	
 	def nuke(filename):
-		pass
+		print("Nuke!")

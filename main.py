@@ -2,22 +2,22 @@ import sys
 import file_editor	
 
 def get_params(fe):
-	fe.params.filename = input("Please enter a filename, or press enter to quit.")
+	fe.params.filename = input("Please enter a filename, or press enter to quit.\n> ")
 	if not fe.params.filename:
 		return False
 		
-	fe.params.word = input("Please enter a word to nuke, or press enter to quit.")
+	fe.params.word = input("Please enter a word to nuke, or press enter to quit.\n> ")
 	if not fe.params.word:
 		return False
 	
-	tmp = input("Would you like to replace this word with another word? ( y/n ) or press enter to quit.")
+	tmp = input("Would you like to replace this word with another word? ( y/n ) or press enter to quit.\n> ")
 	if not tmp:
 		return False
 	else:
 		fe.params.replace = "y" in tmp.lower()
 		
 	if fe.params.replace:
-		fe.params.replace_word = input("Please enter the replacement word, or press enter to quit.")
+		fe.params.replace_word = input("Please enter the replacement word, or press enter to quit.\n> ")
 		if not fe.params.replace_word:
 			return False
 		
